@@ -86,6 +86,7 @@ func dataSourceConnectorSchemaConfig() *schema.Schema {
 				"client_id":                  {Type: schema.TypeString, Computed: true},
 				"client_secret":              {Type: schema.TypeString, Computed: true},
 				"technical_account_id":       {Type: schema.TypeString, Computed: true},
+				"organization":               {Type: schema.TypeString, Computed: true},
 				"organization_id":            {Type: schema.TypeString, Computed: true},
 				"private_key":                {Type: schema.TypeString, Computed: true},
 				"sync_method":                {Type: schema.TypeString, Computed: true},
