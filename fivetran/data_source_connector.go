@@ -471,6 +471,7 @@ func dataSourceConnectorReadConfig(resp *fivetran.ConnectorCustomMergedDetailsRe
 	mapAddStr(c, "client_id", resp.Data.Config.ClientID)
 	mapAddStr(c, "client_secret", resp.Data.Config.ClientSecret)
 	mapAddStr(c, "technical_account_id", resp.Data.Config.TechnicalAccountID)
+	mapAddStr(c, "organization", resp.Data.Config.Organization)
 	mapAddStr(c, "organization_id", resp.Data.Config.OrganizationID)
 	mapAddStr(c, "private_key", resp.Data.Config.PrivateKey)
 	mapAddStr(c, "sync_mode", resp.Data.Config.SyncMode)

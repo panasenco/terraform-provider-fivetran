@@ -207,6 +207,7 @@ func resourceConnectorSchemaConfig() *schema.Schema {
 				"named_range":           {Type: schema.TypeString, Optional: true},
 				"client_id":             {Type: schema.TypeString, Optional: true},
 				"technical_account_id":  {Type: schema.TypeString, Optional: true},
+				"organization":          {Type: schema.TypeString, Optional: true},
 				"organization_id":       {Type: schema.TypeString, Optional: true},
 				"s3bucket":              {Type: schema.TypeString, Optional: true},
 				"abs_connection_string": {Type: schema.TypeString, Optional: true},
@@ -728,6 +729,9 @@ func resourceConnectorUpdateConfig(d *schema.ResourceData) *fivetran.ConnectorCo
 	}
 	if v := c["technical_account_id"].(string); v != "" {
 		fivetranConfig.TechnicalAccountID(v)
+	}
+	if v := c["organization"].(string); v != "" {
+		fivetranConfig.Organization(v)
 	}
 	if v := c["organization_id"].(string); v != "" {
 		fivetranConfig.OrganizationID(v)
@@ -1701,6 +1705,7 @@ func resourceConnectorReadConfig(resp *fivetran.ConnectorCustomMergedDetailsResp
 	mapAddStr(c, "named_range", resp.Data.Config.NamedRange)
 	mapAddStr(c, "client_id", resp.Data.Config.ClientID)
 	mapAddStr(c, "technical_account_id", resp.Data.Config.TechnicalAccountID)
+	mapAddStr(c, "organization", resp.Data.Config.Organization)
 	mapAddStr(c, "organization_id", resp.Data.Config.OrganizationID)
 
 	if v, ok := resp.Data.CustomConfig["sync_method"].(string); ok {
