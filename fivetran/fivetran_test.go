@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	gofivetran "github.com/fivetran/go-fivetran"
+	gofivetran "github.com/panasenco/go-fivetran"
 	"github.com/fivetran/terraform-provider-fivetran/fivetran"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"

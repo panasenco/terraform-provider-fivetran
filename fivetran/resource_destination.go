@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/fivetran/go-fivetran"
+	"github.com/panasenco/go-fivetran"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
