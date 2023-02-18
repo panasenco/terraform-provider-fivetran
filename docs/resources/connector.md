@@ -226,6 +226,7 @@ Optional:
 - `oauth_token_secret` 
 - `on_error` 
 - `on_premise` 
+- `organization` 
 - `organization_id` 
 - `organizations` 
 - `pages` 
